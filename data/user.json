@@ -1,0 +1,17 @@
+[
+  {
+    "username": "ibal",
+    "password": "apaan",
+    "role": "admin"
+  },
+  {
+    "username": "ibnu",
+    "password": "apaan",
+    "role": "owner"
+  },
+  {
+    "username": "rio",
+    "password": "apaan",
+    "role": "owner"
+  }
+]
