@@ -3,6 +3,6 @@ const router = express.Router()
 const { HistoryController } = require('../controllers')
 
 router.post('/', HistoryController.createHistory)
-router.get('/', HistoryController.getAllHistory)
+router.post('/month', HistoryController.getAllHistory)
 
 module.exports = router

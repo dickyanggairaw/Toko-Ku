@@ -17,6 +17,26 @@ class Controller {
       next(error)
     }
   }
+  static async addStockProduct( req, res, next ) {
+    try {
+      const product = await Product.findById({
+        _id: req.params.id
+      })
+      const newStock = product.stock + +req.body.stock
+      const updateStock = await Product.updateOne({
+        _id: req.params.id
+      }, {
+        $set: {
+          stock: newStock
+        }
+      })
+      res.status(200).json({
+        message: `success add stock ${product.title}`
+      })
+    } catch (error) {
+      next(error)
+    }
+  } 
 }
 
 module.exports = Controller

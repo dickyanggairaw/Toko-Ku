@@ -21,7 +21,8 @@ class Controller {
   }
   static async getAllHistory(req, res, next) {
     try {
-      const histories = await History.find()
+      const histories = await History.find({tanggal: { $gte: req.body.start, $lte: req.body.end }})
+      // console.log(histories)
       res.status(200).json(histories)
     } catch (error) {
       next(error)

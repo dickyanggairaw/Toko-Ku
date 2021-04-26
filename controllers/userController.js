@@ -34,7 +34,7 @@ class Controller {
           password: newPassword
         }
       })
-      res.status(200).json(user)
+      res.status(200).json({message: "Success change password"})
     } catch (error) {
       next(error)
     }
